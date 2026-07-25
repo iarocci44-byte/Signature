@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Email Signature</title>
+	<style>
+		/* Outlook desktop may show static fallback only; modern clients animate this block. */
+		@keyframes hammerSwing {
+			0% {
+				transform: scaleX(-1) rotate(-32deg) translate(0, 0);
+			}
+			35% {
+				transform: scaleX(-1) rotate(-0deg) translate(0, 0);
+			}
+			44% {
+				transform: scaleX(-1) rotate(0deg) translate(-0px, 0px);
+			}
+			55% {
+				transform: scaleX(-1) rotate(-0deg) translate(-0px, 0px);
+			}
+			100% {
+				transform: scaleX(-1) rotate(-0deg) translate(0, 0);
+			}
+		}
+
+		@keyframes nailHit {
+			0% {
+				transform: translateY(6px);
+			}
+			40% {
+				transform: translateY(0);
+			}
+			45% {
+				transform: translateY(0px);
+			}
+			52% {
+				transform: translateY(0);
+			}
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes impactFlash {
+			0% {
+				opacity: 1;
+				transform: scale(1);
+			}
+			43% {
+				opacity: 0;
+				transform: scale(0.7);
+			}
+			46% {
+				opacity: 0;
+				transform: scale(1);
+			}
+			60% {
+				opacity: 0;
+				transform: scale(1.1);
+			}
+			100% {
+				opacity: 0;
+				transform: scale(0.7);
+			}
+		}
+
+		.hammer-nail-wrap {
+			display: inline-block;
+			position: relative;
+			width: 148px;
+			height: 78px;
+			vertical-align: middle;
+			margin-right: 0;
+			font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+		}
+
+		.hammer {
+			display: inline-block;
+			position: absolute;
+			left: 10px;
+			top: 0px;
+			font-size: 56px;
+			line-height: 1;
+			transform-origin: 70% 85%;
+			animation: hammerSwing 1.2s infinite;
+		}
+
+		.nail {
+			display: inline-block;
+			position: absolute;
+			right: 30px;
+			top: 50px;
+			width: 22px;
+			height: 40px;
+			animation: nailHit 1.2s infinite;
+		}
+
+		.nail-head {
+			display: block;
+			width: 18px;
+			height: 8px;
+			margin: 0 auto;
+			background: #94a3b8;
+			border-radius: 8px;
+		}
+
+		.nail-shaft {
+			display: block;
+			width: 6px;
+			height: 26px;
+			margin: 0 auto;
+			background: #cbd5e1;
+			border-radius: 3px;
+		}
+
+		.impact {
+			display: inline-block;
+			position: absolute;
+			right: 34px;
+			top: 34px;
+			font-size: 18px;
+			line-height: 1;
+			opacity: 0;
+			animation: impactFlash 1.2s infinite;
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.hammer,
+			.nail,
+			.impact {
+				animation: none !important;
+			}
+		}
+	</style>
+</head>
+<body style="margin: 0; padding: 0; background: #ffffff;">
+	<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="font-family: Verdana, Geneva, sans-serif; color: #1f2937;">
+		<tr>
+			<td style="padding: 14px 0 0 18px;">
+				<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td style="vertical-align: top;">
+							<p style="margin: 0; font-size: 18px; line-height: 22px; font-weight: bold; color: #0f172a;">Randy Singleton</p>
+							<p style="margin: 2px 0 8px 0; font-size: 13px; line-height: 18px; color: #334155;">Branch Manager | Alside Exterior Building Products</p>
+							<p style="margin: 0 0 10px 0; font-size: 12px; line-height: 16px; color: #334155;">
+								Available to help you with your siding and window needs.
+							</p>
+							<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="font-size: 12px; line-height: 17px;">
+								<tr>
+									<td style="padding: 0 10px 0 0; color: #475569;">P</td>
+									<td style="padding: 0 0 0 0;"><a href="tel:+163146745357" style="color: #0b63ce; text-decoration: none;">(631) 467-4535</a></td>
+								</tr>
+								<tr>
+									<td style="padding: 0 10px 0 0; color: #475569;">E</td>
+									<td><a href="mailto:rsingleton@alside.com" style="color: #0b63ce; text-decoration: none;">RSingleton@alside.com</a></td>
+								</tr>
+								<tr>
+									<td style="padding: 0 10px 0 0; color: #475569;">W</td>
+									<td><a href="https://www.alside.com" style="color: #0b63ce; text-decoration: none;">www.alside.com</a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 12px 0 0 18px;">
+				<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tr>
+						<td style="height: 2px; background: linear-gradient(90deg, #0b63ce 0%, #16a34a 100%); font-size: 0; line-height: 0;">&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 12px 0 0 18px; font-size: 10px; line-height: 14px; color: #64748b;">
+				<table role="presentation" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td style="vertical-align: middle; padding-right: 10px; font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;">
+							<!--[if mso]>
+							<span style="display:inline-block; width:148px; height:78px; vertical-align:middle; font-size:50px; line-height:1;">
+								🔨
+								<span style="display:inline-block; width:18px; height:8px; background:#94a3b8; border-radius:8px; margin-left:6px; vertical-align:middle;"></span>
+								<span style="display:inline-block; width:6px; height:22px; background:#cbd5e1; border-radius:3px; margin-left:6px; vertical-align:middle;"></span>
+							</span>
+							<![endif]-->
+							<!--[if !mso]><!-- -->
+							<span class="hammer-nail-wrap" aria-hidden="true">
+								<span class="hammer">🔨</span>
+								<span class="impact">✦</span>
+								<span class="nail">
+									<span class="nail-head"></span>
+									<span class="nail-shaft"></span>
+								</span>
+							</span>
+							<!--<![endif]-->
+						</td>
+						<td style="vertical-align: middle; font-size: 11px; line-height: 16px; color: #475569;">
+							Built to last, installed with precision.
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
